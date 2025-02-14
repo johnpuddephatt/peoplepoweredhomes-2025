@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="227.4" height="126.9" viewBox="0 -40 227.4 86.9">
+  <style>
+    #cloud {
+      animation: bobbing 2s infinite reverse ease-in-out
+    }
+    @keyframes bobbing {
+      0%,100% {
+        transform: translateY(-25%);
+      }
+      50% {
+        transform: translateY(25%);
+      }
+    }
+  </style>
+  <path id="cloud" d="M204.3 22.2c-.1-14.6-28-33.3-43.6-5.7 0 0-15.9-5.9-15.9 9.4 0 0-5.8-.5-5.8 8.7h86.1s-4.3-19.2-20.8-12.4zm-90 12.4h-62m-21.3 0H0" fill="#FFF" stroke="#000" stroke-width="4.695" stroke-linejoin="round" stroke-miterlimit="10"/>
+</svg>

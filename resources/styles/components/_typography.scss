@@ -1,0 +1,54 @@
+html {
+  font-size: 0.75em;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 0.875em;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 1em;
+  }
+
+  @media screen and (min-width: $widescreen) {
+    font-size: 1.125em;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $heading-line-height;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: ms(1);
+}
+
+.title {
+  font-size: ms(3);
+  font-weight: $weight-black;
+  margin-bottom: ms(0);
+
+  &._large {
+    font-size: ms(5);
+  }
+}
+
+p {
+  margin-bottom: $spacer/2;
+}
+
+.content {
+  a:not(.wp-block-button__link) {
+    border-bottom: 2px solid $primary-bis;
+    transition: border 1s ease;
+
+    &:hover {
+      border-bottom-color: $primary;
+    }
+  }
+}

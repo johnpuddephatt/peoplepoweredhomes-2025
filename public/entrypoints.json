@@ -1,0 +1,21 @@
+{
+  "app": {
+    "js": [
+      "js/runtime.ddac92.js",
+      "js/app.d91342.js"
+    ],
+    "css": [
+      "css/app.aa5582.css"
+    ],
+    "dependencies": []
+  },
+  "customizer": {
+    "js": [
+      "js/runtime.ddac92.js",
+      "js/customizer.20a509.js"
+    ],
+    "dependencies": [
+      "jquery"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+$modularscale: (
+  base: 1rem,
+  ratio: 1.2
+);
+
+$black: #000;
+$gray: #999;
+$primary: #64e2d8;
+$primary-bis: #8edfde;
+$spacer: 2rem;
+$base-border: 0.2em solid $black;
+$weight-black: 900;
+
+$body-family: "Barlow", sans-serif;
+$heading-line-height: 1.25;
+$body-line-height: 1.7;
+$text: $black;
+$link: $black;
+$title-color: $black;
+$subtitle-color: #666;
+
+$navbar-item-img-max-height: 3rem;
+$box-padding: $spacer * 2;
+
+$box-shadow: 0 2rem 8rem -2rem rgba(100, 100, 100, 0.5);
+
+$gap: 32px;
+$desktop: 880px + (2 * $gap);

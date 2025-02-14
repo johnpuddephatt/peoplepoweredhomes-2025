@@ -1,0 +1,1 @@
+<svg class="dash-stripe" xmlns="http://www.w3.org/2000/svg" width="193" height="5" viewBox="0 0 193 5"><path d="M76 0h41v5H76zM43 0h24v5H43zM18 0h15v5H18zM0 0h9v5H0zM126 0h24v5h-24zM160 0h15v5h-15zM184 0h9v5h-9z"/></svg>

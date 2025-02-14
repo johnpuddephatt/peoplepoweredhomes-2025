@@ -1,0 +1,21 @@
+.container {
+  padding-left: $spacer/2;
+  padding-right: $spacer/2;
+
+  @media screen and (min-width: $tablet) {
+    padding-left: $spacer;
+    padding-right: $spacer;
+  }
+
+  &__centered {
+    text-align: center;
+  }
+
+  &__tablet {
+    max-width: $tablet;
+  }
+
+  &__desktop {
+    max-width: $desktop;
+  }
+}

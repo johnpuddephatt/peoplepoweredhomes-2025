@@ -1,0 +1,762 @@
+
+
+/* ============
+  Hero
+============ */
+
+.section--hero {
+  .section--hero--inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - #{6 * $spacer});
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      align-items: center;
+      height: auto;
+    }
+  }
+
+  .title {
+    font-weight: 900;
+  }
+}
+
+.hero-text {
+  padding-bottom: $spacer;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 2 * $spacer;
+  }
+
+  position: relative;
+
+  .title {
+    font-size: ms(6);
+
+    @media screen and (min-width: $widescreen) {
+      font-size: ms(7);
+    }
+  }
+}
+
+.hero-body {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hero-image {
+  width: 100%;
+  margin-bottom: $spacer;
+
+  @media screen and (min-width: $desktop) {
+    order: 2;
+    flex: 0 0 55%;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ============
+  What we do
+============ */
+
+.section--work {
+  position: relative;
+}
+
+.container__sections {
+  position: relative;
+  z-index: 9;
+  padding-top: 4 * $spacer;
+  text-align: center;
+}
+
+.home__sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2 * $spacer;
+
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+  }
+}
+
+.home__section {
+  flex: 0 1 33.33%;
+  padding: 2rem;
+  margin-bottom: $spacer/2;
+
+  @media screen and (orientation: landscape) {
+    margin-left: $spacer/2;
+    margin-right: $spacer/2;
+    margin-bottom: 0 !important;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  img {
+    object-fit: contain;
+    object-position: bottom;
+    height: 3.5 * $spacer;
+    display: block;
+  }
+
+  h3 {
+    font-size: ms(2);
+    font-weight: $weight-bold;
+    margin-top: $spacer;
+    margin-bottom: $spacer/2;
+  }
+
+  p {
+    font-size: ms(-1);
+    margin-bottom: 2em;
+  }
+
+  .button {
+    margin: auto auto 0;
+  }
+}
+
+/* ============
+  Contact
+============ */
+
+.section-contact {
+  form {
+    margin: 0 auto;
+  }
+}
+
+/* ============
+  Newsletter
+============ */
+
+.section--newsletter {
+  margin-top: $spacer;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3 * $spacer;
+    padding-bottom: 3 * $spacer;
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .newsletter-image {
+    width: 8 * $spacer;
+  }
+
+  .title {
+    margin-bottom: $spacer/2;
+  }
+
+  input[type="text"] {
+    width: 7 * $spacer;
+    font-size: ms(0);
+    padding: $spacer/4 $spacer/2;
+    border-radius: $radius;
+  }
+
+  .newsletter-text {
+    margin-top: $spacer;
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 0;
+      margin-right: $spacer;
+      max-width: 13 * $spacer;
+    }
+
+    br {
+      @media screen and (max-width: $widescreen) {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ============
+  About
+============ */
+
+.section--about {
+  margin-top: $spacer;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3 * $spacer;
+    padding-bottom: 3 * $spacer;
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .about-image {
+    width: 8 * $spacer;
+  }
+
+  .title {
+    margin-bottom: $spacer/2;
+  }
+}
+
+/* ============
+  Why CLH
+============ */
+
+.section--why {
+  position: relative;
+}
+
+.dash-stripe {
+  margin-bottom: $spacer;
+  height: $spacer/6;
+  width: auto;
+}
+
+.why--item {
+  display: flex;
+  position: relative;
+  z-index: 99;
+  flex-direction: row;
+  align-items: center;
+  margin: 1.5 * $spacer 0 0;
+
+  &:nth-child(2n) {
+    @media screen and (min-width: $desktop) {
+      .why--item--icon {
+        order: 2;
+        margin-right: 0;
+        margin-left: 2 * $spacer;
+      }
+    }
+  }
+}
+
+.why--item--icon {
+  flex: 0 0 30%;
+  margin-right: $spacer/2;
+
+  @media screen and (min-width: $desktop) {
+    flex: 0 0 33.3%;
+    margin-right: 2 * $spacer;
+  }
+
+  svg {
+    margin-left: auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ============
+  Supporters
+============ */
+
+.section--supporters {
+  background: linear-gradient(to bottom, $primary, $primary-bis, white);
+  position: relative;
+  padding-top: 4 * $spacer;
+  padding-bottom: 2 * $spacer;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 14 * $spacer;
+    padding-bottom: 2 * $spacer;
+  }
+
+  .title {
+    position: relative;
+    z-index: 9;
+  }
+}
+
+.container--supporters {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+.supporters--item {
+  @extend .box;
+  @extend .is-paddingless;
+
+  position: relative;
+  flex: 0 1 33.3%;
+  margin-top: $spacer;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: $desktop) {
+    margin: 5 * $spacer $spacer/4 $spacer;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $widescreen) {
+    margin: 5 * $spacer $spacer/2 $spacer;
+  }
+}
+
+.supporters--item--icon {
+  margin: $spacer;
+
+  img {
+    display: block;
+    border-radius: 50%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc(100% - #{2 * $spacer});
+    float: none;
+    margin: -4 * $spacer auto $spacer/2;
+  }
+}
+
+.supporters--item--text {
+  padding: $spacer $spacer $spacer 0;
+  flex: 1 1;
+
+  @media screen and (orientation: portrait) {
+    padding: $spacer;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 $spacer $spacer/2;
+  }
+}
+
+.supporters--item--title {
+  font-size: ms(2);
+  font-weight: 900;
+  word-wrap: break-word;
+  margin-bottom: $spacer/2;
+
+  @media screen and (min-width: $desktop) {
+    font-size: ms(4);
+  }
+}
+
+.supporters--item--quote {
+  font-size: ms(1);
+  font-weight: 700;
+  margin-bottom: 0;
+
+  &::before,
+  &::after {
+    content: "“";
+    margin-right: $spacer/12;
+    line-height: 0;
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+    font-size: ms(3);
+
+    @media screen and (min-width: $desktop) {
+      font-size: ms(4);
+    }
+  }
+
+  &::after {
+    margin-right: 0;
+    margin-left: $spacer/12;
+    content: "”";
+  }
+}
+
+.supporters--video-button {
+  line-height: 2 * $spacer;
+  display: block;
+  text-transform: none;
+  font-size: ms(0);
+  width: 100%;
+  text-align: right;
+  background-color: transparent;
+  padding: $spacer/4 $spacer;
+  margin: 0;
+  color: $text;
+  border-top: 1px solid lightgray;
+  border-radius: 0;
+
+  @media screen and (orientation: portrait) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+    font-size: ms(-1);
+    padding: $spacer/4 ($spacer);
+  }
+
+  @media screen and (min-width: $widescreen) {
+    font-size: ms(0);
+  }
+
+  &:hover {
+    background-color: $primary;
+    color: white;
+  }
+
+  &::before {
+    content: "";
+    width: 1.6 * $spacer;
+    height: 1.6 * $spacer;
+    margin: -0.4 * $spacer 0.4 * $spacer;
+    margin-left: 0;
+    display: inline-block;
+    background: url(../../images/icon-video.svg) center / contain no-repeat;
+
+    @media screen and (min-width: $desktop) {
+      margin: 0.2 * $spacer 0.6 * $spacer;
+      margin-left: 0;
+      float: left;
+    }
+  }
+}
+
+/* ============
+  Progress
+============ */
+
+@keyframes progresscloud {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(25vw);
+  }
+
+  20.001% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes progresscloud2 {
+  0%,
+  80.001%,
+  100% {
+    transform: translateX(100vw);
+  }
+
+  80% {
+    transform: translateX(-25vw);
+  }
+}
+
+.section--progress {
+  padding: 2 * $spacer 0 $spacer;
+
+  .container {
+    position: relative;
+  }
+
+  .title {
+    padding-top: 2 * $spacer;
+    margin-bottom: 2 * $spacer;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      left: 0;
+      bottom: 110%;
+      width: 6 * $spacer;
+      height: 3 * $spacer;
+      position: absolute;
+      background-image: url(../../images/progress-clouds-1.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: progresscloud2 25s 0s infinite;
+      animation-timing-function: linear;
+    }
+
+    &::after {
+      width: 4 * $spacer;
+      height: 2 * $spacer;
+      right: 0;
+      left: auto;
+      top: 110%;
+      background-image: url(../../images/progress-clouds-2.svg);
+      animation: progresscloud 25s infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+.container--progress {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+.progress--item {
+  flex: 0 0 33.3%;
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+  margin: $spacer 0 $spacer;
+
+  @media screen and (min-width: $desktop) {
+    margin: 1.5 * $spacer 0 $spacer;
+  }
+}
+
+.progress--item--figure {
+  line-height: $heading-line-height;
+  font-weight: 900;
+  font-size: ms(8);
+
+  @media screen and (min-width: $desktop) {
+    font-size: ms(9);
+  }
+}
+
+.progress--item--text {
+  font-weight: 900;
+  font-size: ms(2);
+
+  @media screen and (min-width: $desktop) {
+    font-size: ms(4);
+  }
+}
+
+.lch-row {
+  width: 100%;
+  height: auto;
+  margin: $spacer auto 0;
+}
+
+/* ============
+  Blog
+============ */
+
+.section--blog {
+  margin: 2 * $spacer 0 2 * $spacer;
+}
+
+.container--blog {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2 * $spacer;
+  margin-bottom: 2 * $spacer;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+.blog--item {
+  padding: 2rem 2rem 1.5rem;
+  overflow: hidden;
+  flex: 0 1 33.3%;
+  margin-bottom: $spacer/2;
+  display: flex;
+  position: relative;
+  z-index: 9;
+  flex-direction: column;
+  color: $text;
+
+  @media screen and (orientation: landscape) {
+    margin-bottom: 0 !important;
+  }
+
+  @media screen and (min-width: $desktop) {
+    + .blog--item {
+      margin-left: $spacer;
+    }
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.blog--item--title {
+  margin-bottom: $spacer/2;
+  font-size: ms(1);
+  font-weight: $weight-bold;
+}
+
+.blog--item--excerpt {
+  font-size: ms(-1);
+  margin-bottom: $spacer/2;
+}
+
+.blog--item--image {
+  margin: -2rem -2rem 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.blog--item--date {
+  padding-top: $spacer/4;
+  padding-bottom: $spacer/4;
+  font-size: ms(-1);
+  font-weight: 700;
+}
+
+.blog--item--footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+.blog--view-all {
+  // font-weight: $weight-bold;
+  border-bottom: 2px solid;
+}
+
+/*
+** Latest project
+**/
+
+.container--latest-project {
+  display: flex;
+  flex-direction: row;
+  margin-left: $spacer;
+  margin-right: $spacer;
+
+  @media screen and (min-width: $widescreen) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    margin-left: $spacer/2;
+    margin-right: $spacer/2;
+    font-size: ms(-1);
+  }
+
+  margin-top: 4 * $spacer;
+  margin-bottom: 4 *$spacer;
+  background-color: #fff;
+  position: relative;
+  border: $base-border;
+  border-radius: $radius;
+  align-items: center;
+
+  .latest-project--image {
+    flex: 0 0 40%;
+    margin-top: -$spacer;
+    margin-bottom: -$spacer;
+    margin-left: -0.9 * $spacer;
+    margin-right: $spacer;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media screen and (orientation: portrait) {
+      margin-right: 0;
+      margin-left: 0;
+      width: 80%;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  .latest-project--text {
+    margin: $spacer;
+
+    @media screen and (orientation: portrait) {
+      margin-top: 2 * $spacer;
+      margin-bottom: 2 * $spacer;
+    }
+  }
+
+  .latest-project--header {
+    font-weight: 900;
+    margin-bottom: 0;
+    font-size: ms(0);
+    line-height: $heading-line-height;
+  }
+
+  .latest-project--name {
+    color: $primary;
+    font-size: ms(4);
+    line-height: $heading-line-height;
+    font-weight: 900;
+    margin-bottom: $spacer/2;
+  }
+
+  .latest-project--description {
+    font-weight: 700;
+    font-size: ms(1);
+    line-height: $heading-line-height;
+    margin-bottom: $spacer;
+  }
+
+  &::after {
+    content: "";
+    height: 5 * $spacer;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0%;
+    bottom: -3 * $spacer;
+    background-image: url(../../images/latest-project-bottom.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media screen and (orientation: portrait) {
+      bottom: -4 * $spacer;
+    }
+  }
+
+  &::before {
+    content: "";
+    height: 5 * $spacer;
+    width: 75%;
+    display: block;
+    position: absolute;
+    right: -8 * $spacer;
+    top: -4 * $spacer;
+    background-image: url(../../images/latest-project-top.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media screen and (orientation: portrait) {
+      right: -2 * $spacer;
+      top: -2 * $spacer;
+      height: 6 * $spacer;
+      width: 85%;
+    }
+  }
+}

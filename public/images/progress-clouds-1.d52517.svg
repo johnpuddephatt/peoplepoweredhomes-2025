@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="287.4" height="194.8" viewBox="0 -40 287.4 154.8">
+  <style>
+    #mini-cloud {
+      animation: bob 2s infinite ease-in-out
+    }
+    #big-cloud {
+      animation: bob 2s infinite reverse ease-in-out
+    }
+    @keyframes bob {
+      0%,100% {
+        transform: translateY(-15%);
+      }
+      50% {
+        transform: translateY(15%);
+      }
+    }
+  </style>
+  <path id="big-cloud" d="M111.6 102.5H2.5s-2.8-16 13.8-11.7c-4.8-11 12.7-22.9 21.5-10.5-.7-10.4 16.1-25.8 32.6-8.6.1-22.1 42.3-50.2 65.8-8.6 0 0 24-8.9 24 14.1 0 0 8.8-.8 8.8 13.1H74m112.2-.1h54.9m18.9 0h27.4" fill="#FFF" stroke="#000" stroke-width="4.695" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path id="mini-cloud" d="M179.3 20c.1-13 24.8-29.5 38.6-5 0 0 14.1-5.2 14.1 8.3 0 0 5.1-.5 5.1 7.7h-76.2s3.8-17.1 18.4-11z" fill="#FFF" stroke="#000" stroke-width="4.695" stroke-linejoin="round" stroke-miterlimit="10"/>
+</svg>

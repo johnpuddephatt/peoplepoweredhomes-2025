@@ -1,0 +1,75 @@
+.page-header {
+  text-align: center;
+  padding-top: 2 * $spacer;
+  position: relative;
+
+  .page-back {
+    text-align: left;
+    margin-top: -$spacer;
+    margin-bottom: 1.5 * $spacer;
+  }
+
+  &--description {
+    font-size: ms(1);
+    max-width: 30em;
+    margin: 0 auto;
+    line-height: $heading-line-height;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: calc(100% + #{8 * $spacer});
+    background-image: radial-gradient(circle at 50% 25%, #{$primary-bis} 0, #{$primary} 40%);
+
+    @media screen and (min-width: $desktop) {
+      background-image: radial-gradient(circle at 75% 50%, #{$primary-bis} 0, #{$primary} 40%);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: calc(100% - #{2 * $spacer});
+    height: 10 * $spacer;
+    background-image: linear-gradient(to top left, white 0%, white 50%, transparent 50%);
+  }
+
+  .container {
+    max-width: $tablet;
+  }
+
+  .title {
+    font-size: $size-1;
+    margin-bottom: $spacer/2;
+  }
+
+  p {
+    font-weight: 700;
+    margin-bottom: 2 * $spacer;
+  }
+}
+
+.page--icon {
+  display: block;
+  width: 9 * $spacer;
+  height: auto;
+  margin: 0 auto $spacer/2;
+}
+
+.page--thumbnail {
+  margin-bottom: $spacer;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

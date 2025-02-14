@@ -1,0 +1,151 @@
+.site-footer {
+  margin-top: $spacer;
+  padding: 2 * $spacer 0;
+  position: relative;
+  background-color: $primary;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+}
+
+.footer-left {
+  flex: 0 0 50%;
+
+  a {
+    text-decoration: underline;
+  }
+
+  h3 {
+    font-weight: $weight-bold;
+    font-size: ms(1);
+    margin-bottom: 0;
+    margin-bottom: $spacer/4;
+  }
+
+  p {
+    font-size: ms(-1);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-navigation {
+  flex: 0 0 40%;
+  margin-top: $spacer;
+
+  @media screen and (orientation: landscape) {
+    margin-top: 0;
+    margin-left: 2 * $spacer;
+  }
+
+  .menu-item {
+    padding-top: 0 !important;
+
+    @media screen and (orientation: portrait) {
+      padding-left: 0 !important;
+    }
+
+    a {
+      font-size: ms(0);
+      color: $text;
+      font-weight: $weight-bold;
+      display: block;
+      padding: 0;
+    }
+  }
+}
+
+.footer-logo {
+  flex: 0 0 15%;
+  text-align: right;
+  display: none;
+  margin-right: $spacer;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.secondary-footer {
+  padding-top: $spacer/2;
+  padding-bottom: $spacer/2;
+  background-color: white;
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .footer-title {
+    font-size: ms(2);
+    margin-bottom: 0;
+  }
+}
+
+.container--footer-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+
+  @media screen and (orientation: portrait) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-logo-link {
+  flex: 0 1 10%;
+  margin-right: $spacer;
+
+  @media screen and (orientation: portrait) {
+    margin-top: $spacer;
+    margin-right: $spacer/2;
+    margin-left: $spacer/2;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: $spacer/2;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: $spacer;
+  }
+
+  &.xl {
+    flex: 0 1 20%;
+    margin-right: 2 * $spacer;
+  }
+
+  &.wide {
+    flex: 0 1 15%;
+  }
+
+  &.x-wide {
+    flex: 0 1 25%;
+  }
+
+  &.medium {
+    flex: 0 1 10%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

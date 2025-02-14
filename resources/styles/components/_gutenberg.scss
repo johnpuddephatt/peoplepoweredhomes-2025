@@ -1,0 +1,16 @@
+.wp-block-group {
+  margin: $spacer 0;
+  border-radius: $spacer;
+
+  &.has-background {
+    padding: 2 * $spacer 3 * $spacer $spacer;
+  }
+}
+
+.wp-block-column {
+  position: relative;
+
+  iframe {
+    height: 100%;
+  }
+}

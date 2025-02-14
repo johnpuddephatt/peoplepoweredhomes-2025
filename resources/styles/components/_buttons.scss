@@ -1,0 +1,39 @@
+.button {
+  border-radius: $radius;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  display: inline-block;
+  box-shadow: $box-shadow;
+  border-color: white;
+
+  &.is-small {
+    line-height: 1.2;
+    border-radius: $radius;
+    border: $base-border;
+  }
+
+  &.is-bordered {
+    border: 1px solid $grey-light;
+  }
+}
+
+.wp-block-button__link {
+  @extend .button;
+
+  border-color: $black;
+  font-size: 1.2rem;
+  border: 1px solid $gray;
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
+    color: $black;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    border-color: $black;
+  }
+}

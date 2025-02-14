@@ -1,0 +1,21 @@
+.container--post {
+  margin-top: $spacer;
+  margin-bottom: 2 * $spacer;
+
+  .content {
+    margin-bottom: 0;
+  }
+}
+
+.post--thumbnail {
+  margin: -4rem -2rem 2rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.post--date {
+  font-weight: $weight-bold;
+}
