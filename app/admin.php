@@ -6,7 +6,7 @@ namespace App;
  * Theme customizer
  */
 add_action('customize_register', function (\WP_Customize_Manager $wp_customize) {
-    $wp_customize->remove_panel('widgets');
+    // $wp_customize->remove_panel('widgets');
     $wp_customize->remove_section('custom_css');
 
     // remove nav menus
