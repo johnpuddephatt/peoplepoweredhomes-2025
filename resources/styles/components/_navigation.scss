@@ -5,6 +5,10 @@
   }
 }
 
+.is-arrowless::after {
+  display: none;
+}
+
 .navbar {
   .navbar-link {
     font-weight: $weight-bold;
