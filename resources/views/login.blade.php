@@ -5,6 +5,8 @@
 @extends('layouts.app')
 
 @section('content')
+  <div class="page-header">
+  </div>
   <div class="container container--wide my-16">
     <div class="card !grid grid-cols-2">
       {{ the_post_thumbnail('4x3_xl', ['class' => 'h-full object-cover']) }}
@@ -12,7 +14,7 @@
       <div class="p-16">
         <h2 class="title">{!! $title !!}</h2>
 
-        <div class="bg-teal-100 content mb-6 p-6">
+        <div class="content mb-6 bg-primary bg-opacity-20 p-6">
 
           {!! str_replace(
               '[register]',
