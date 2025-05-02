@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="container container--wide">
+  <div class="container container--wide my-16">
     <div class="card !grid grid-cols-2">
       {{ the_post_thumbnail('4x3_xl', ['class' => 'h-full object-cover']) }}
 
