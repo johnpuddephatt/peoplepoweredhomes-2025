@@ -5,7 +5,7 @@
     <clipPath id="clip-oval" clipPathUnits="objectBoundingBox">
       <path
         d="
-                                                                                                                          M0.998,1 C0.999,0.974,1,0.948,1,0.921 C1,0.412,0.776,0,0.5,0 S0,0.412,0,0.921 C0,0.948,0.001,0.974,0.002,1 H0.998">
+                                                                                                                                      M0.998,1 C0.999,0.974,1,0.948,1,0.921 C1,0.412,0.776,0,0.5,0 S0,0.412,0,0.921 C0,0.948,0.001,0.974,0.002,1 H0.998">
       </path>
     </clipPath>
   </svg>
@@ -112,7 +112,8 @@
       <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
         @foreach ($sections as $section)
           <a href="/section/{{ $section->slug }}" class="rounded bg-white p-6 shadow-xl">
-            <img src="{{ $section->icon }}" />
+
+            <img class="mx-auto mb-4 h-auto w-28" src="{{ $section->icon }}" />
             <h3 class="mb-2 text-xl font-black">{{ $section->name }}</h3>
             <p class="mb-6">{{ $section->description }}</p>
 
