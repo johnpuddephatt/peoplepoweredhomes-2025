@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_roots_bud_sage=self.webpackChunk_roots_bud_sage||[]).push([[290],{"./scripts/customizer.js":function(){var s=window.jQuery;wp.customize("blogname",(e=>{e.bind((e=>s(".brand").text(e)))})),wp.customize("address",(e=>{e.bind((e=>s(".address").text(e)))}))}},function(s){var e;e="./scripts/customizer.js",s(s.s=e)}]);

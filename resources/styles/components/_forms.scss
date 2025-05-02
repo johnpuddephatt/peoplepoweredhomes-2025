@@ -18,3 +18,17 @@
 .search-form .search-submit {
   @extend .button, .is-info;
 }
+
+.wpcf7-text,
+.wpcf7-textarea {
+  @apply border-[3px] border-black py-2 px-4 bg-white bg-opacity-30 rounded-xl mb-3;
+}
+
+.wpcf7-text:focus,
+.wpcf7-textarea:focus {
+  @apply bg-opacity-100;
+}
+
+.wpcf7-submit {
+  @apply border-[3px] border-black rounded bg-white px-8 py-1 font-semibold;
+}

@@ -5,6 +5,7 @@
   display: inline-block;
   box-shadow: $box-shadow;
   border-color: white;
+  height: auto !important;
 
   &.is-small {
     line-height: 1.2;
@@ -13,16 +14,18 @@
   }
 
   &.is-bordered {
-    border: 1px solid $grey-light;
+    border: 3px solid $black;
   }
 }
 
 .wp-block-button__link {
   @extend .button;
 
-  border-color: $black;
-  font-size: 1.2rem;
-  border: 1px solid $gray;
+  background-color: $primary;
+
+  // border-color: $black;
+  border: 2px solid $black;
+  font-size: 1.1rem;
 
   &:active,
   &:focus,

@@ -1,6 +1,6 @@
 @if(count($pages))
 
-  <div class="container container__desktop related-pages">
+  <div class="container container__desktop related-pages {{ $wide??false  ? '!max-w-5xl' : '' }}">
     <div class="related-pages--header">
       <h2 class="title _large">Keep reading</h2>
       <p class="subtitle">More pages in this section</p>

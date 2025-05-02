@@ -10,10 +10,12 @@ class Page extends Composer
 
     protected static $views = [
         'page',
+        'template-fullwidth',
         'login',
         'register',
         'simple',
-        'taxonomy-section'
+        'taxonomy-section',
+        'template-groups'
     ];
 
     public function with()
@@ -26,12 +28,14 @@ class Page extends Composer
 
     public function page()
     {
+
+
         $page = new \stdClass();
         $page->ID = get_the_ID();
 
         $page->icon = get_field('icon');
         $page->title = get_the_title();
-        $page->thumbnail = get_the_post_thumbnail(null, '16x9', [
+        $page->thumbnail = get_the_post_thumbnail(null, get_page_template_slug(get_the_ID()) === 'template-fullwidth.blade.php' ? 'wide' : '16x9', [
             'sizes' => '(min-width: 780px) 780px, 90vw'
         ]);
         $page->section = $this->section();

@@ -1,12 +1,7 @@
-<div class="container min-h-screen container__tablet">
+<div class="container min-h-screen container__tablet {{ $wide??false  ? '!max-w-5xl' : '' }}">
 
 
 
-  @if($page->thumbnail)
-    <div class="page--thumbnail">
-      {!! $page->thumbnail !!}
-    </div>
-  @endif
 
   <div class="content">
 
@@ -15,6 +10,5 @@
 @endwhile
   </div>
 
-  {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
 
 </div>

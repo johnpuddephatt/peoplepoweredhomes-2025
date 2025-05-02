@@ -1,18 +1,27 @@
 {
   "app": {
     "js": [
-      "js/runtime.ddac92.js",
-      "js/app.d91342.js"
+      "js/runtime.2e2c46.js",
+      "js/app.f75c54.js"
     ],
     "css": [
-      "css/app.16e744.css"
+      "css/app.d27cb2.css"
+    ],
+    "dependencies": []
+  },
+  "editor": {
+    "js": [
+      "js/runtime.2e2c46.js"
+    ],
+    "css": [
+      "css/editor.b5fc8f.css"
     ],
     "dependencies": []
   },
   "customizer": {
     "js": [
-      "js/runtime.ddac92.js",
-      "js/customizer.20a509.js"
+      "js/runtime.2e2c46.js",
+      "js/customizer.261210.js"
     ],
     "dependencies": [
       "jquery"

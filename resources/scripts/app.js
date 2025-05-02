@@ -1,3 +1,6 @@
+import Alpine from 'alpinejs';
+window.Alpine = Alpine;
+Alpine.start();
 
 // import local dependencies
 import Router from './util/Router';
@@ -16,6 +19,6 @@ const routes = new Router({
 });
 
 // Load Events
-document.addEventListener('DOMContentLoaded',()=> {
+document.addEventListener('DOMContentLoaded', () => {
   routes.loadEvents();
 });

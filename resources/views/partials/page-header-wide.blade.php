@@ -1,6 +1,6 @@
-<div class="page-header">
+<div class="page-header-wide">
 
-  <div class="container">
+  <div class="container pt-8  !max-w-6xl">
 
     @if($page->section ?? false)
       <nav class="page-back">
@@ -24,11 +24,19 @@
     @endif
 
 
+  @if($page->thumbnail)
+    <div class="page--thumbnail mt-4 mb-8">
+      {!! $page->thumbnail !!}
+    </div>
+  @endif
+
+
     @if($page->icon)
       <img class="page--icon" src="{!! $page->icon !!}">
     @endif
+    
 
-    <h1 class="title">{!! $title !!}</h1>
+    <h1 class="title text-4xl font-bold text-center !mb-16">{!! $title !!}</h1>
 
     <div class="page-header--description">
       @if($page->excerpt ?? false)
@@ -40,17 +48,6 @@
       @endif
     </div>
 
-      @if($page->thumbnail)
-    <div class="page--thumbnail aspect-video">
-      {!! $page->thumbnail !!}
-    </div>
-  @endif
-
   </div>
 
- 
-
 </div>
-
-
- 

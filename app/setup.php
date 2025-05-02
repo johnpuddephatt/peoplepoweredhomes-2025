@@ -5,11 +5,30 @@ namespace App;
 
 use function Roots\bundle;
 
+
+
+// add_action('acf/init', function () {
+//   acf_update_setting('google_api_key', 'AIzaSyDaXk46QYjxROwoMm4TaNAMWdqKgWi64ek');
+// });
+
+
+
+add_filter('acf/fields/google_map/api', function ($api) {
+  $api['key'] = 'AIzaSyC79w3vlb0BHortUdnEqeoD-3fLPz0QU-I';
+  return $api;
+});
+
 /**
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
   bundle('app')->enqueue();
+}, 100);
+
+
+
+add_action('enqueue_block_editor_assets', function () {
+  bundle('editor')->enqueue();
 }, 100);
 
 add_action('wp_print_styles', function () {
@@ -76,6 +95,10 @@ add_action('after_setup_theme', function () {
   add_image_size('16x9_xl', 1280, 720, true);
   add_image_size('16x9_l', 640, 360, true);
   add_image_size('16x9', 320, 180, true);
+
+  add_image_size('wide_xl', 2460, 900, true);
+  add_image_size('wide_l', 1230, 450, true);
+  add_image_size('wide', 615, 225, true);
 
   /**
    * Enable HTML5 markup support

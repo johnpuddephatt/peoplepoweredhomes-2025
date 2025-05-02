@@ -262,6 +262,25 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         )
     );
 
+    $wp_customize->add_setting(
+        'bluesky',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+
+    $wp_customize->add_control(
+        'bluesky',
+        array(
+            'label' => 'Bluesky',
+            'section' => 'social',
+            'settings' => 'bluesky'
+        )
+    );
+
+
 
     $wp_customize->add_panel('home_panel', array(
         'priority'       => 10,
@@ -270,6 +289,120 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'title'          => 'Home',
         'description'    => '',
     ));
+
+    $wp_customize->add_section(
+        'home_hero',
+        array(
+            'title' => 'Home Hero',
+            'description' => '',
+            'priority' => 15,
+            'panel' => 'home_panel',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'home_hero_title',
+        array(
+            'default' => 'Welcome to People Powered Homes',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+
+    );
+
+    $wp_customize->add_control(
+        'home_hero_title',
+        array(
+            'label' => 'Home Hero Title',
+            'section' => 'home_hero',
+            'settings' => 'home_hero_title'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'home_hero_content',
+        array(
+            'default' => 'At the heart of the Community Led Housing movement',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+
+    );
+
+    $wp_customize->add_control(
+        'home_hero_content',
+        array(
+            'label' => 'Home Hero Content',
+            'section' => 'home_hero',
+            'settings' => 'home_hero_content'
+        )
+    );
+
+
+    $wp_customize->add_setting(
+        'home_hero_button_text',
+        array(
+            'default' => 'Learn more',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+
+    );
+
+    $wp_customize->add_control(
+        'home_hero_button_text',
+        array(
+            'label' => 'Home Hero Button Text',
+            'section' => 'home_hero',
+            'settings' => 'home_hero_button_text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'home_hero_button_url',
+        array(
+            'default' => null,
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+
+    );
+
+    $wp_customize->add_control(
+        'home_hero_button_url',
+        array(
+            'label' => 'Home Hero Button URL',
+            'section' => 'home_hero',
+            'settings' => 'home_hero_button_url'
+        )
+    );
+
+    $wp_customize->add_setting('home_hero_image');
+
+    $wp_customize->add_control(
+        new \WP_Customize_Media_Control(
+            $wp_customize,
+            'home_hero_image',
+            array(
+                'label' => 'Hero Image',
+                'section' => 'home_hero',
+                'settings' => 'home_hero_image',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        'home_section_A',
+        array(
+            'type' => 'select',
+            'label' => 'Section A',
+            'section' => 'home_sections',
+            'settings' => 'home_section_A',
+            'choices' => array_reduce(
+                get_terms('section'),
+                function ($result, $item) {
+                    $result[$item->term_id] = $item->name;
+                    return $result;
+                }
+            ),
+        )
+    );
 
     $wp_customize->add_section(
         'home_sections',
@@ -355,6 +488,28 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             ),
         )
     );
+
+
+    // $wp_customize->add_setting('themeslug_dropdownpages_setting_id', array(
+    //     'capability' => 'edit_theme_options',
+    //     'sanitize_callback' => 'themeslug_sanitize_dropdown_pages',
+    // ));
+
+    // $wp_customize->add_control('themeslug_dropdownpages_setting_id', array(
+    //     'type' => 'dropdown-pages',
+    //     'section' => 'home_sections', // Add a default or your own section
+    //     'label' => __('Custom Dropdown Pages'),
+    //     'description' => __('This is a custom dropdown pages option.'),
+    // ));
+
+    // function themeslug_sanitize_dropdown_pages($page_id, $setting)
+    // {
+    //     // Ensure $input is an absolute integer.
+    //     $page_id = absint($page_id);
+
+    //     // If $page_id is an ID of a published page, return it; otherwise, return the default.
+    //     return ('publish' == get_post_status($page_id) ? $page_id : $setting->default);
+    // }
 });
 
 /**

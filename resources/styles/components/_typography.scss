@@ -1,3 +1,19 @@
+.type-lg {
+  @apply text-4xl font-black;
+}
+
+.type-xl {
+  @apply text-6xl font-black;
+}
+
+.type-md {
+  @apply text-xl font-bold;
+}
+
+.type-sm {
+  @apply text-lg font-bold;
+}
+
 html {
   font-size: 0.75em;
 

@@ -34,6 +34,13 @@
         </a>
         @endif
 
+          @if(get_theme_mod('bluesky'))
+        <a title="Bluesky" class="navbar-item social-icon" href="//bsky.app/profile/{{ get_theme_mod('bluesky') }}"
+          target="_blank">
+          @include('images.bluesky')
+        </a>
+        @endif
+
         @if(get_theme_mod('youtube'))
         <a title="YouTube" class="navbar-item social-icon" href="{{ get_theme_mod('twitter') }}" target="_blank">
           @include('images.youtube')
@@ -54,30 +61,19 @@
         @endif
 
       </nav>
-      <div class="ml-8 font-bold lowercase">
-      @if(is_user_logged_in())
       
-      <a href="{{ wp_logout_url() }}" >Logout</a>
-      @else
-     
-      <a href="{{ get_field('login_page', 'option') }}" >Login</a>
-              @endif
-              </div>
-
-    </div>
 
   </nav>
 
   @if($primary_navigation)
-  <nav class="navbar navbar__primary" role="navigation" aria-label="primary navigation">
+  <nav class="navbar navbar__primary bg-primary/30" role="navigation" aria-label="primary navigation">
     <div class="container">
       <div id="navMenu-primary" class="navbar-menu">
         <div class="navbar-start">
-          <div class="navbar-item">
-            <a class="navbar-link is-arrowless" href="/">
+          <a class="navbar-item font-bold"  href="{{ home_url('/') }}">
               Home
-            </a>
-          </div>
+        
+          </a>
 
           @foreach( $primary_navigation as $section )
           <div class="navbar-item has-dropdown is-hoverable">
@@ -93,6 +89,19 @@
             </div>
           </div>
           @endforeach
+
+         
+
+    </div>
+     <div class="ml-auto font-bold lowercase">
+      @if(is_user_logged_in())
+      
+      <a class="navbar-item mt-1.5 bg-white rounded" href="{{ wp_logout_url() }}" >Logout</a>
+      @else
+     
+      <a class="navbar-item mt-1.5 bg-white rounded" href="{{ get_field('login_page', 'option') }}" >Login</a>
+              @endif
+              </div>
         </div>
         @if (has_nav_menu('secondary_navigation'))
         {!! wp_nav_menu($secondary_navigation) !!}
