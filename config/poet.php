@@ -24,7 +24,6 @@ return [
                 'plural' => 'Groups',
             ],
         ],
-        'foo' => []
     ],
 
     /*

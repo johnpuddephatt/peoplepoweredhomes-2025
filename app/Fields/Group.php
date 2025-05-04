@@ -17,13 +17,13 @@ class Group extends Field
         $fields
             ->setLocation('post_type', '==', 'group')
             ->addText('location_name')
-            ->addSelect('group_status', [
-                'choices' => [
-                    'forming' => 'Forming',
-                    'developing' => 'Developing',
-                    'established' => 'Established',
-                ],
-            ])
+            // ->addSelect('group_status', [
+            //     'choices' => [
+            //         'forming' => 'Forming',
+            //         'developing' => 'Developing',
+            //         'established' => 'Established',
+            //     ],
+            // ])
             ->addUrl('web_address')
             ->addGoogleMap('location_geo', [
                 'label' => 'Location',

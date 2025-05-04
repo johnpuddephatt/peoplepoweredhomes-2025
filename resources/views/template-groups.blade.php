@@ -152,12 +152,12 @@
               <span x-text="group.area"></span>
             </p>
 
-            <p class="rounded px-4 py-1"
+            <p class="rounded px-4 py-1 font-semibold antialiased"
               :class="{
-                  'bg-[lightblue]': group.stage == 'Forming',
-                  'bg-[lightyellow]': group.stage ==
+                  'border-2 border-black': group.stage == 'Forming',
+                  'bg-primary': group.stage ==
                       'Developing',
-                  'bg-[lightgreen]': group.stage == 'Established'
+                  'bg-black text-white': group.stage == 'Established'
               }"
               x-text="group.stage"></p>
           </div>
@@ -192,31 +192,44 @@
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg></button>
-          <div class="h-[90vh] overflow-auto rounded-t-xl border-2 border-black">
-            <div x-show="selectedGroup().image" x-html="selectedGroup().image"
-              class="overflow-hidden rounded-lg px-6 pt-6">
+          <div class="flex h-[90vh] flex-col overflow-hidden rounded-t-xl border-2 border-black">
+            <div x-show="selectedGroup().image" x-html="selectedGroup().image">
             </div>
 
-            <div class="sticky top-0 bg-white px-6 pt-6">
-              <h2 class="mb-2 text-4xl font-bold" x-text="selectedGroup().post_title"></h2>
-              <div class="flex items-center gap-4">
-                <p class="flex items-center gap-1">
-                  <x-icons.marker class="inline-block h-4 w-4 fill-black" />
-                  <span x-text="selectedGroup().area"></span>
-                </p>
+            <div class="sticky top-0 border-b-2 border-b-primary bg-white">
+              <div class="mx-auto max-w-2xl px-6 py-6">
+                <h2 class="mb-2 text-4xl font-bold" x-text="selectedGroup().post_title"></h2>
+                <div class="flex items-center gap-4">
+                  <p class="flex items-center gap-1">
+                    <x-icons.marker class="inline-block h-4 w-4 fill-black" />
+                    <span x-text="selectedGroup().area"></span>
+                  </p>
 
-                <p class="rounded px-4 py-1"
-                  :class="{
-                      'bg-[lightblue]': selectedGroup().stage == 'Forming',
-                      'bg-[lightyellow]': selectedGroup().stage ==
-                          'Developing',
-                      'bg-[lightgreen]': selectedGroup().stage == 'Established'
-                  }"
-                  x-text="selectedGroup().stage"></p>
+                  <p class="rounded px-4 py-1 font-semibold antialiased"
+                    :class="{
+                        'border-2 border-black': selectedGroup().stage == 'Forming',
+                        'bg-primary': selectedGroup().stage ==
+                            'Developing',
+                        'bg-black text-white': selectedGroup().stage == 'Established'
+                    }"
+                    x-text="selectedGroup().stage"></p>
+
+                  <a target="_blank" :href="selectedGroup().web_address" x-show="selectedGroup().web_address"
+                    class="ml-auto flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
+                      class="size-6" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5a17.92 17.92 0 0 1-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                    Visit website
+
+                  </a>
+                </div>
               </div>
-              <hr x-show="selectedGroup().post_content" class="my-6 !h-0.5 rounded-2xl bg-primary" />
             </div>
-            <div class="prose max-w-2xl px-6 pb-8" x-html="selectedGroup().post_content"></div>
+            <div class="flex-grow overflow-auto">
+              <div class="prose mx-auto max-w-2xl px-6 py-6 pb-8" x-html="selectedGroup().post_content"></div>
+            </div>
           </div>
         </dialog>
       </div>

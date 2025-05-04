@@ -62,7 +62,7 @@ class Groups extends Composer
             unset($group->post_content_filtered);
 
 
-            $group->image = get_the_post_thumbnail($group->ID, 'large');
+            $group->image = get_the_post_thumbnail($group->ID, 'wide_l', ['class' => 'w-full']);
             $group->thumb = get_the_post_thumbnail($group->ID, 'thumbnail');
 
             $group->location = get_field('location_geo', $group->ID);
