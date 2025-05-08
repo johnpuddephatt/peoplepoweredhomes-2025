@@ -76,8 +76,8 @@
       <h2 class="title">{{ $title }}</h2>
 
       <div class="mb-6 bg-primary bg-opacity-20 p-6">
-        If you’re a member of a group we’re working with but haven’t created a login yet, <a href="/register"
-          class="underline">register an account</a>.
+        Membership of this site if for groups we’re working with. If you’re not part of a group, please contact us to
+        discuss your needs.
       </div>
 
       @if (!empty($errors))
